@@ -4,19 +4,19 @@ function BinarioADecimal(num) {
   // tu codigo aca
   let sum = 0;
   for (let i = 0; i < num.length; i++) {
-    sum += num[i] * Math.pow(2, num.length - i - 1);
+    sum = sum + num[i] * Math.pow(2, num.length - i - 1);
   }
   return sum;
 }
 
 function DecimalABinario(num) {
   // tu codigo aca
-let binario = '';
+let binario = [];
   while (num > 0) {
-    binario = (num % 2) + binario;
+    binario.unshift(num % 2);
     num = Math.floor(num / 2);
   }
-  return binario;
+  return binario.join('');
 }
 
 
